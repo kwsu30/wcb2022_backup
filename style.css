@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
-/* Sets the background color of the body to blue. Sets font to Rubik */
+.header-block {
+  flex-wrap: nowrap;
+  background: peachpuff;
+  border: 4px solid brown;
+  height: 100px;
+  flex: 2;
+}
+
 
 body {
   background-color: #0A2344;
   font-family: 'rubik', sans-serif;
-  font-weight: 700;
   font-style: normal;
   letter-spacing: .01em;
   text-transform: none;
@@ -13,14 +19,12 @@ body {
 
 
 element {
-
+  padding-top: 95.9px;
   white-space: pre-wrap;
   transition-timing-function: ease;
   transition-duration: 0.4s;
   transition-delay: 0.0711111s;
-
 }
-
 
 
 .fadeIn:not([data-override-initial-global-animation]) {
@@ -121,5 +125,4 @@ h4 {
   font-size: 30px;
   color: black;
   cursor: pointer;
-}
-  
+}  
