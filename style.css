@@ -5,41 +5,69 @@
 body {
   background-color: #0A2344;
   font-family: 'rubik', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: .01em;
+  text-transform: none;
 }
+
+
+element {
+
+  white-space: pre-wrap;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+  transition-delay: 0.0711111s;
+
+}
+
+
+
+.fadeIn:not([data-override-initial-global-animation]) {
+  opacity: 1 !important;
+}
+
+.preFade {
+  opacity: 0;
+  transition-property: opacity;
+}
+
 
 /* Aligns the heading text to the center. */
  
 h1 {
-  text-align: center;
+  text-align: left;
 }
 
-/* Sets the width for the accordion. Sets the margin to 90px on the top and bottom and auto to the left and right */
-
-.accordion {
-  width: 800px;
-  margin: 90px auto;
-  color: black;
-  background-color: white;
-  padding: 45px 45px;
+/* Aligns the heading text to the center. */
+ 
+h2 {
+  text-align: left;
+  color: #38568d;
+  font-size: calc((3.2 - 1) * 1.2vw + 1rem);
+  line-height: 1.0944;
 }
 
-.accordion .container {
-  position: relative;
-  margin: 10px 10px;
+/* Aligns the heading text to the center. */
+ 
+h4 {
+  text-align: left;
 }
-  
-/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
-  
-.accordion .label {
-  position: relative;
-  padding: 10px 0;
+
+
+/* Unhides the content part when active. Sets the height */
+
+.accordion .container.active .content {
+  height: 150px;
+}
+
+/* Changes from plus sign to negative sign once active */
+
+.accordion .container.active .label::before {
+  content: '-';
   font-size: 30px;
-  color: black;
-  cursor: pointer;
 }
-  
-  
-/* Positions the plus sign 5px from the right. Centers it using the transform property. */
+
 
 .accordion .label::before {
   content: '+';
@@ -51,7 +79,6 @@ h1 {
   transform: translateY(-50%);
 }
   
-/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
   
 .accordion .content {
   position: relative;
@@ -71,3 +98,28 @@ h1 {
   margin-left: 0;
   border: 1px solid grey;
 }
+
+
+.accordion {
+  width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-color: white;
+  padding: 45px 45px;
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+  
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+  
